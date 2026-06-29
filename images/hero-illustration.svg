@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="h1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#h1)" rx="20"/>
+  <rect x="80" y="120" width="440" height="200" rx="12" fill="#fff" stroke="#bfdbfe" stroke-width="2"/>
+  <rect x="80" y="120" width="440" height="40" rx="12" fill="#2563eb"/>
+  <circle cx="100" cy="140" r="6" fill="#fff" opacity="0.6"/>
+  <circle cx="116" cy="140" r="6" fill="#fff" opacity="0.6"/>
+  <circle cx="132" cy="140" r="6" fill="#fff" opacity="0.6"/>
+  <rect x="160" y="132" width="60" height="16" rx="4" fill="#fff" opacity="0.4"/>
+  <text x="300" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Your Website</text>
+  <rect x="140" y="210" width="320" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="140" y="210" width="240" height="8" rx="4" fill="#2563eb"/>
+  <rect x="140" y="230" width="320" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="140" y="230" width="180" height="8" rx="4" fill="#2563eb"/>
+  <rect x="140" y="250" width="320" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="140" y="250" width="290" height="8" rx="4" fill="#22c55e"/>
+  <rect x="140" y="270" width="200" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="140" y="270" width="100" height="8" rx="4" fill="#2563eb"/>
+  <rect x="240" y="295" width="120" height="6" rx="3" fill="#94a3b8"/>
+  <path d="M250 340l20-20 20 20" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="310" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#64748b">99.9% Uptime Guaranteed</text>
+  <path d="M480 280l-30-30M480 280l-30 30" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M480 200l-30-30" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <circle cx="490" cy="300" r="4" fill="#2563eb" opacity="0.3"/>
+  <circle cx="510" cy="240" r="3" fill="#22c55e" opacity="0.3"/>
+  <circle cx="500" cy="180" r="5" fill="#2563eb" opacity="0.3"/>
+</svg>
