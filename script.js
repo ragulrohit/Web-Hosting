@@ -1,3 +1,54 @@
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+if (currentPage === 'index.html') {
+    const pageLoader = document.createElement('div');
+    pageLoader.className = 'page-loader';
+    pageLoader.setAttribute('role', 'status');
+    pageLoader.setAttribute('aria-live', 'polite');
+    pageLoader.innerHTML = `
+        <div class="loader-panel">
+            <img src="images/Stackly_logo.webp" alt="Stackly" class="loader-logo">
+            <span class="loader-kicker">Web Hosting</span>
+            <div class="loader-percent"><span id="loaderPercent">0</span>%</div>
+            <div class="loader-track" aria-hidden="true">
+                <span id="loaderBar"></span>
+            </div>
+        </div>
+    `;
+    document.body.prepend(pageLoader);
+    document.body.classList.add('is-loading');
+
+    const loaderPercent = document.getElementById('loaderPercent');
+    const loaderBar = document.getElementById('loaderBar');
+    const loaderDuration = 2000;
+    const loaderStart = performance.now();
+
+    const updateLoader = (now) => {
+        const progress = Math.min((now - loaderStart) / loaderDuration, 1);
+        const loaderValue = Math.round(progress * 100);
+        if (loaderPercent) {
+            loaderPercent.textContent = loaderValue;
+        }
+        if (loaderBar) {
+            loaderBar.style.width = `${loaderValue}%`;
+        }
+
+        if (progress >= 1) {
+            setTimeout(() => {
+                pageLoader.classList.add('is-hidden');
+                document.body.classList.remove('is-loading');
+            }, 260);
+            setTimeout(() => {
+                pageLoader.remove();
+            }, 760);
+            return;
+        }
+
+        requestAnimationFrame(updateLoader);
+    };
+
+    requestAnimationFrame(updateLoader);
+}
+
 // Mobile hamburger menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
