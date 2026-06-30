@@ -11,11 +11,12 @@
         <div class="container nav-container">
             <a href="index.html" class="logo"><img src="images/Stackly_logo.webp" alt="Stackly" class="logo-img"></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="features.html">Features</a></li>
                 <li><a href="solutions.html">Solutions</a></li>
                 <li><a href="performance.html">Performance</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-login">Login</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <svg class="hamburger-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -33,26 +34,70 @@
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <span class="hero-kicker">Colorful cloud hosting for growing websites</span>
-                <h1>Launch faster with <span class="highlight">powerful web hosting</span></h1>
-                <p>Give your website the speed, security, and support it deserves with SSD storage, free SSL, automatic backups, and expert help whenever you need it.</p>
-                <div class="hero-buttons">
-                    <a href="#pricing" class="btn-primary btn-lg">View Plans</a>
-                    <a href="features.html" class="btn-outline btn-lg">Learn More</a>
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <span class="hero-kicker">Colorful cloud hosting for growing websites</span>
+                    <h1>Launch faster with <span class="highlight">powerful web hosting</span></h1>
+                    <p>Give your website the speed, security, and support it deserves with SSD storage, free SSL, automatic backups, and expert help whenever you need it.</p>
+                    <div class="hero-buttons">
+                        <a href="#pricing" class="btn-primary btn-lg">View Plans</a>
+                        <a href="features.html" class="btn-outline btn-lg">Learn More</a>
+                    </div>
+                    <div class="hero-stats" aria-label="Hosting highlights">
+                        <div>
+                            <strong>99.9%</strong>
+                            <span>uptime</span>
+                        </div>
+                        <div>
+                            <strong>24/7</strong>
+                            <span>support</span>
+                        </div>
+                        <div>
+                            <strong>10x</strong>
+                            <span>faster SSD</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-stats" aria-label="Hosting highlights">
-                    <div>
-                        <strong>99.9%</strong>
-                        <span>uptime</span>
+                <div class="hero-visual" aria-label="Stackly hosting dashboard preview">
+                    <div class="hero-dashboard-card">
+                        <div class="dashboard-window-bar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="server-status-row">
+                            <div>
+                                <span class="status-dot"></span>
+                                stacklydemo.com
+                            </div>
+                            <strong>Live</strong>
+                        </div>
+                        <div class="hero-meter">
+                            <div><span style="width: 92%"></span></div>
+                            <p>Page speed score</p>
+                        </div>
+                        <div class="hero-mini-grid">
+                            <div>
+                                <strong>SSL</strong>
+                                <span>Active</span>
+                            </div>
+                            <div>
+                                <strong>CDN</strong>
+                                <span>Global</span>
+                            </div>
+                            <div>
+                                <strong>Backup</strong>
+                                <span>Today</span>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <strong>24/7</strong>
-                        <span>support</span>
+                    <div class="floating-host-card card-speed">
+                        <img src="images/speed.webp" alt="">
+                        <span>128ms response</span>
                     </div>
-                    <div>
-                        <strong>10x</strong>
-                        <span>faster SSD</span>
+                    <div class="floating-host-card card-shield">
+                        <img src="images/shield.webp" alt="">
+                        <span>Threats blocked</span>
                     </div>
                 </div>
             </div>
@@ -76,6 +121,64 @@
             <div>
                 <strong>Easy Control Panel</strong>
                 <span>manage hosting in minutes</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="domain-showcase" id="domains">
+        <div class="container domain-showcase-grid">
+            <div class="domain-copy">
+                <span class="section-kicker">Domains, hosting, and launch tools</span>
+                <h2>Everything your website needs before it goes live.</h2>
+                <p>Find a domain, connect DNS, protect visitors with SSL, create professional email, and launch on fast hosting from one simple Stackly workspace.</p>
+                <div class="domain-tool-list">
+                    <div>
+                        <img src="images/cloud.webp" alt="">
+                        <span>Managed DNS and cloud hosting setup</span>
+                    </div>
+                    <div>
+                        <img src="images/envelope.webp" alt="">
+                        <span>Business email routing and records</span>
+                    </div>
+                    <div>
+                        <img src="images/shield.webp" alt="">
+                        <span>SSL, backups, and security monitoring</span>
+                    </div>
+                </div>
+            </div>
+            <div class="domain-visual" aria-label="Domain search and hosting setup preview">
+                <div class="domain-search-card">
+                    <span>Search your domain</span>
+                    <div class="domain-search-row">
+                        <strong>yourbrand.com</strong>
+                        <button type="button">Check</button>
+                    </div>
+                </div>
+                <div class="domain-tld-grid">
+                    <div>
+                        <strong>.com</strong>
+                        <span>Popular</span>
+                    </div>
+                    <div>
+                        <strong>.in</strong>
+                        <span>Local</span>
+                    </div>
+                    <div>
+                        <strong>.store</strong>
+                        <span>Commerce</span>
+                    </div>
+                    <div>
+                        <strong>.cloud</strong>
+                        <span>Tech</span>
+                    </div>
+                </div>
+                <div class="domain-status-card">
+                    <img src="images/check.webp" alt="">
+                    <div>
+                        <strong>Ready to launch</strong>
+                        <span>DNS, SSL, email, and backups connected</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -246,6 +349,134 @@
         </div>
     </section>
 
+    <section class="hosting-team">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-kicker">Expert hosting specialists</span>
+                <h2 class="section-title">Guidance from Launch to Growth</h2>
+                <p>Work with people who understand websites, DNS, security, migrations, and everyday hosting problems.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="images/support.webp" alt="Migration specialist">
+                    <h3>Migration Specialist</h3>
+                    <p>Moves files, databases, and domain settings with careful launch checks.</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/shield.webp" alt="Security specialist">
+                    <h3>Security Specialist</h3>
+                    <p>Helps configure SSL, malware monitoring, backups, and safer updates.</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/speed.webp" alt="Performance specialist">
+                    <h3>Performance Specialist</h3>
+                    <p>Tunes caching, CDN delivery, storage, and resource usage for faster pages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hosting-departments">
+        <div class="container departments-grid">
+            <div class="departments-copy">
+                <span class="section-kicker">Service departments</span>
+                <h2>Focused hosting care for every part of your website.</h2>
+                <p>Stackly organizes the essentials into practical service areas, so you can understand what is protected, optimized, and ready for growth.</p>
+            </div>
+            <div class="department-list">
+                <div>
+                    <img src="images/cloud.webp" alt="">
+                    <strong>Website Hosting</strong>
+                    <span>SSD storage, PHP support, control panel access, and scalable resources.</span>
+                </div>
+                <div>
+                    <img src="images/envelope.webp" alt="">
+                    <strong>Domains and Email</strong>
+                    <span>DNS records, mail routing, domain connection, and launch checks.</span>
+                </div>
+                <div>
+                    <img src="images/backup.webp" alt="">
+                    <strong>Backup Recovery</strong>
+                    <span>Daily restore points and practical recovery support if something changes.</span>
+                </div>
+                <div>
+                    <img src="images/uptime.webp" alt="">
+                    <strong>Uptime Monitoring</strong>
+                    <span>Availability checks and alerts that help keep your website reachable.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hosting-gallery">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-kicker">Visual hosting toolkit</span>
+                <h2 class="section-title">A clearer view of your website setup</h2>
+                <p>See the core pieces that keep a modern website fast, secure, discoverable, and easier to manage.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-feature">
+                    <img src="images/features-page-image.png" alt="Hosting control panel preview">
+                    <div>
+                        <h3>Unified control panel</h3>
+                        <p>Manage websites, domains, SSL, backups, and performance from one workspace.</p>
+                    </div>
+                </div>
+                <div class="gallery-tile">
+                    <img src="images/solutions-page-image.png" alt="Website launch workflow">
+                    <strong>Launch workflows</strong>
+                </div>
+                <div class="gallery-tile">
+                    <img src="images/performance-page-image.png" alt="Performance dashboard">
+                    <strong>Performance insights</strong>
+                </div>
+                <div class="gallery-tile">
+                    <img src="images/hero-colorful-hosting.png" alt="Cloud hosting infrastructure">
+                    <strong>Cloud infrastructure</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hosting-tips">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-kicker">Hosting tips</span>
+                <h2 class="section-title">Simple ways to keep your website healthy</h2>
+                <p>Practical guidance for owners, teams, stores, and creators who want a safer, faster website.</p>
+            </div>
+            <div class="tips-grid">
+                <article>
+                    <img src="images/check.webp" alt="">
+                    <h3>Use HTTPS from day one</h3>
+                    <p>SSL protects visitor data and helps browsers show your website as trustworthy.</p>
+                </article>
+                <article>
+                    <img src="images/backup.webp" alt="">
+                    <h3>Keep restore points fresh</h3>
+                    <p>Daily backups make design changes, updates, and content edits much less risky.</p>
+                </article>
+                <article>
+                    <img src="images/speed.webp" alt="">
+                    <h3>Watch page speed early</h3>
+                    <p>Compress images, use caching, and serve visitors from nearby CDN locations.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="urgent-support">
+        <div class="container urgent-support-inner">
+            <div>
+                <span class="section-kicker">Urgent website help</span>
+                <h2>Site down, SSL broken, or DNS not resolving?</h2>
+                <p>Stackly support helps troubleshoot critical hosting issues so your visitors can get back to your website quickly.</p>
+            </div>
+            <a href="contact.html" class="btn-primary btn-lg">Contact Support</a>
+        </div>
+    </section>
+
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Simple, Transparent Pricing</h2>
@@ -259,7 +490,7 @@
                         <li><img src="images/check.webp" alt="" class="check-icon"> Free SSL</li>
                         <li><img src="images/check.webp" alt="" class="check-icon"> 24/7 Support</li>
                     </ul>
-                    <a href="#pricing" class="btn-primary">Choose Plan</a>
+                    <a href="404.html" class="btn-primary">Choose Plan</a>
                 </div>
                 <div class="pricing-card featured">
                     <div class="badge">Popular</div>
@@ -272,7 +503,7 @@
                         <li><img src="images/check.webp" alt="" class="check-icon"> Daily Backups</li>
                         <li><img src="images/check.webp" alt="" class="check-icon"> 24/7 Support</li>
                     </ul>
-                    <a href="#pricing" class="btn-primary">Choose Plan</a>
+                    <a href="404.html" class="btn-primary">Choose Plan</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Enterprise</h3>
@@ -284,7 +515,7 @@
                         <li><img src="images/check.webp" alt="" class="check-icon"> Daily Backups</li>
                         <li><img src="images/check.webp" alt="" class="check-icon"> Priority Support</li>
                     </ul>
-                    <a href="#pricing" class="btn-primary">Choose Plan</a>
+                    <a href="404.html" class="btn-primary">Choose Plan</a>
                 </div>
             </div>
         </div>
@@ -358,9 +589,24 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <h4><img src="images/Stackly_logo.webp" alt="Stackly" class="footer-logo"></h4>
-                    <p>Fast, secure, and reliable web hosting for everyone.</p>
+                <div class="footer-col footer-brand">
+                    <img src="images/Stackly_logo.webp" alt="Stackly" class="footer-logo">
+                    <h4>Stackly Hosting</h4>
+                    <p>Your trusted partner for fast, secure, and scalable web hosting. Launch websites, manage domains, protect data, and grow online with reliable cloud infrastructure.</p>
+                    <div class="footer-social" aria-label="Social links">
+                        <a href="404.html" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.3-1.3H17V2.3c-.8-.1-1.7-.2-2.6-.2-2.7 0-4.5 1.6-4.5 4.6v1.8H7v3.6h2.9V22H14v-9.9h2.8l.5-3.6H14z"/></svg>
+                        </a>
+                        <a href="404.html" aria-label="X Twitter">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2.3h3.3l-7.2 8.3 8.5 11.2h-6.7l-5.2-6.8-6 6.8H1.7l7.7-8.8L1.3 2.3h6.8l4.7 6.2 5.4-6.2zm-1.2 17.5h1.8L7.1 4.1H5.1l11.9 15.7z"/></svg>
+                        </a>
+                        <a href="404.html" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm0 2C5.7 4 4 5.7 4 7.8v8.4C4 18.3 5.7 20 7.8 20h8.4c2.1 0 3.8-1.7 3.8-3.8V7.8C20 5.7 18.3 4 16.2 4H7.8zm8.7 2.1c.8 0 1.4.6 1.4 1.4s-.6 1.4-1.4 1.4-1.4-.6-1.4-1.4.6-1.4 1.4-1.4zM12 7.1A4.9 4.9 0 1 1 12 17a4.9 4.9 0 0 1 0-9.9zm0 2A2.9 2.9 0 1 0 12 15a2.9 2.9 0 0 0 0-5.9z"/></svg>
+                        </a>
+                        <a href="404.html" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 8.8H3.1V22h3.8V8.8zM5 2.2a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zm6.3 6.6H7.7V22h3.8v-6.9c0-1.8.8-3 2.4-3 1.4 0 2 1 2 2.8V22h3.8v-7.7c0-3.8-2-5.8-4.9-5.8-2.2 0-3.2 1.2-3.7 2h.1V8.8z"/></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
@@ -373,15 +619,30 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
+                    <h4>Services</h4>
                     <ul>
-                        <li><img src="images/envelope.webp" alt="" class="contact-icon"> support@swifthost.com</li>
-                        <li><img src="images/phone.webp" alt="" class="contact-icon"> 1-800-SWIFT</li>
+                        <li><a href="404.html">Web Hosting</a></li>
+                        <li><a href="404.html">Domain Management</a></li>
+                        <li><a href="404.html">Cloud Performance</a></li>
+                        <li><a href="404.html">SSL & Security</a></li>
+                        <li><a href="404.html">Website Migration</a></li>
+                        <li><a href="404.html">Daily Backups</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="404.html">FAQ</a></li>
+                        <li><a href="404.html">Support Center</a></li>
+                        <li><a href="404.html">Client Login</a></li>
+                        <li><a href="404.html">Contact Support</a></li>
+                        <li><a href="404.html">Hosting Guide</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Stackly. All rights reserved.</p>
+                <p>Made for faster, safer websites</p>
             </div>
         </div>
     </footer>
