@@ -108,6 +108,108 @@ passwordToggles.forEach(passwordToggle => {
     });
 });
 
+const signupForm = document.getElementById('signupForm');
+if (signupForm) {
+    const signupFields = [
+        {
+            input: document.getElementById('name'),
+            error: document.getElementById('nameError'),
+            messages: {
+                valueMissing: 'Please enter your full name.'
+            }
+        },
+        {
+            input: document.getElementById('signupEmail'),
+            error: document.getElementById('signupEmailError'),
+            messages: {
+                valueMissing: 'Please enter your email address.',
+                typeMismatch: 'Please enter a valid email address.'
+            }
+        },
+        {
+            input: document.getElementById('signupPassword'),
+            error: document.getElementById('signupPasswordError'),
+            messages: {
+                valueMissing: 'Please create a password.',
+                tooShort: 'Password must be at least 8 characters.'
+            }
+        },
+        {
+            input: document.getElementById('confirmPassword'),
+            error: document.getElementById('confirmPasswordError'),
+            messages: {
+                valueMissing: 'Please confirm your password.',
+                customError: 'Passwords do not match.'
+            }
+        }
+    ];
+
+    const getFieldMessage = ({ input, messages }) => {
+        if (!input.validity.valid) {
+            const invalidState = Object.keys(messages).find(state => input.validity[state]);
+            return messages[invalidState] || 'Please check this field.';
+        }
+
+        return '';
+    };
+
+    const validateSignupField = (field) => {
+        const passwordInput = document.getElementById('signupPassword');
+        const confirmInput = document.getElementById('confirmPassword');
+
+        if (confirmInput && passwordInput && field.input === confirmInput) {
+            const hasMismatch = confirmInput.value && passwordInput.value && confirmInput.value !== passwordInput.value;
+            confirmInput.setCustomValidity(hasMismatch ? 'Passwords do not match.' : '');
+        }
+
+        const message = getFieldMessage(field);
+        field.input.classList.toggle('is-invalid', Boolean(message));
+        if (field.error) {
+            field.error.textContent = message;
+        }
+
+        return !message;
+    };
+
+    signupFields.forEach(field => {
+        if (!field.input) return;
+
+        field.input.addEventListener('input', () => {
+            validateSignupField(field);
+            if (field.input.id === 'signupPassword') {
+                const confirmField = signupFields.find(item => item.input && item.input.id === 'confirmPassword');
+                if (confirmField && confirmField.input.value) {
+                    validateSignupField(confirmField);
+                }
+            }
+        });
+
+        field.input.addEventListener('blur', () => validateSignupField(field));
+    });
+
+    signupForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const fieldResults = signupFields.map(field => field.input && validateSignupField(field));
+        const isValid = fieldResults.every(Boolean);
+        if (!isValid) {
+            const firstInvalidField = signupFields.find(field => field.input && field.input.classList.contains('is-invalid'));
+            if (firstInvalidField) {
+                firstInvalidField.input.focus();
+            }
+            return;
+        }
+
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('signupEmail');
+        const displayName = nameInput.value.trim() || 'Stackly User';
+
+        localStorage.setItem('stacklyUserName', displayName);
+        localStorage.setItem('stacklyUserEmail', emailInput.value.trim());
+        window.location.href = 'dashboard.html';
+    });
+}
+
 const loginForm = document.querySelector('form.login-form[action="dashboard.html"]');
 if (loginForm) {
     loginForm.addEventListener('submit', (e) => {

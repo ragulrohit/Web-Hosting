@@ -37,7 +37,7 @@
         <section class="login-form-panel">
             <div class="login-card">
                 <div class="login-topbar">
-                    <img src="images/Stackly_logo.webp" alt="Stackly" class="login-card-logo">
+                    <a href="index.html"><img src="images/Stackly_logo.webp" alt="Stackly" class="login-card-logo"></a>
                     <a href="index.html" class="back-home" aria-label="Back to home">
                         <span aria-hidden="true">&larr;</span>
                         Back to Home
@@ -49,7 +49,7 @@
                     <p>Set up your Stackly hosting dashboard.</p>
                 </div>
 
-                <form class="login-form">
+                <form class="login-form" id="signupForm" novalidate>
                     <div class="login-tabs" role="tablist" aria-label="Account access">
                         <a href="login.html" role="tab" aria-selected="false">Log In</a>
                         <a href="signup.html" class="active" role="tab" aria-selected="true">Create Account</a>
@@ -57,18 +57,20 @@
 
                     <div class="login-field">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+                        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required aria-describedby="nameError">
+                        <span class="field-error" id="nameError" aria-live="polite"></span>
                     </div>
 
                     <div class="login-field">
                         <label for="signupEmail">Email Address</label>
-                        <input type="email" id="signupEmail" name="email" placeholder="you@company.com" autocomplete="email">
+                        <input type="email" id="signupEmail" name="email" placeholder="you@company.com" autocomplete="email" required aria-describedby="signupEmailError">
+                        <span class="field-error" id="signupEmailError" aria-live="polite"></span>
                     </div>
 
                     <div class="login-field">
                         <label for="signupPassword">Password</label>
                         <div class="password-field">
-                            <input type="password" id="signupPassword" name="password" placeholder="Create password" autocomplete="new-password">
+                            <input type="password" id="signupPassword" name="password" placeholder="Create password" autocomplete="new-password" required minlength="8" aria-describedby="signupPasswordError">
                             <button type="button" class="password-toggle" aria-label="Show password" data-password-target="signupPassword">
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/>
@@ -76,12 +78,13 @@
                                 </svg>
                             </button>
                         </div>
+                        <span class="field-error" id="signupPasswordError" aria-live="polite"></span>
                     </div>
 
                     <div class="login-field">
                         <label for="confirmPassword">Confirm Password</label>
                         <div class="password-field">
-                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" autocomplete="new-password">
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" autocomplete="new-password" required aria-describedby="confirmPasswordError">
                             <button type="button" class="password-toggle" aria-label="Show password" data-password-target="confirmPassword">
                                 <svg viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/>
@@ -89,6 +92,7 @@
                                 </svg>
                             </button>
                         </div>
+                        <span class="field-error" id="confirmPasswordError" aria-live="polite"></span>
                     </div>
 
                     <div class="login-field">
@@ -108,7 +112,7 @@
                     </div>
 
                     <div class="social-login">
-                        <button type="button">
+                        <button type="button" onclick="window.location.href='404.html'">
                             <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09Z"/>
                                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23Z"/>
@@ -117,7 +121,7 @@
                             </svg>
                             Google
                         </button>
-                        <button type="button">
+                        <button type="button" onclick="window.location.href='404.html'">
                             <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill="#1877F2" d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07Z"/>
                             </svg>

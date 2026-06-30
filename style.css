@@ -2500,6 +2500,7 @@ body {
 .login-card-logo {
     width: 150px;
     height: auto;
+    filter: brightness(0) invert(1);
 }
 
 .login-copy h1 {
@@ -2733,6 +2734,22 @@ body {
 .login-field select:focus {
     border-color: #0ea5e9;
     box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.16);
+}
+
+.login-field input.is-invalid,
+.login-field select.is-invalid {
+    border-color: #f87171;
+    box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.14);
+}
+
+.field-error {
+    display: block;
+    min-height: 18px;
+    margin-top: 8px;
+    color: #fca5a5;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.35;
 }
 
 .password-field {
